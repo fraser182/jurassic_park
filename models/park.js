@@ -1,5 +1,3 @@
-// const Dinosaur = require('./dinosaur.js');
-
 const Park = function (name, ticketPrice, dinosaurs) {
   this.name = name;
   this.ticketPrice = ticketPrice;
@@ -24,8 +22,8 @@ Park.prototype.findBySpecies = function(species){
     if(dinosaur.species === species){
       dinosaursBySpecies.push(dinosaur);
     }
-    return dinosaursBySpecies;
   }
+  return dinosaursBySpecies;
 }
 
 Park.prototype.totalVisitorsPerDay = function() {

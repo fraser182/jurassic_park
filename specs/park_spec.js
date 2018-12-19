@@ -54,11 +54,22 @@ describe('Park', function() {
   });
 
   it('should be able to find the dinosaur that attracts the most visitors');
+  // sort array by guestAttractedperday
+  // take index[0]
 
 
+  it('should be able to find all dinosaurs of a particular species', function(){
+    const actual = park.findBySpecies('t-rex');
+    const expected = [dinosaur1, dinosaur4];
+    assert.deepStrictEqual(actual, expected);
+  });
 
 
-
+  it('should be able to find all dinosaurs of a particular species(empty)', function(){
+    const actual = park.findBySpecies('mikeosaurus');
+    const expected = [];
+    assert.deepStrictEqual(actual, expected);
+  });
 
   it('should be able to remove all dinosaurs of a particular species');
 
