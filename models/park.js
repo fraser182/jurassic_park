@@ -18,10 +18,20 @@ Park.prototype.removeDinosaur = function(dinosaur)
 }
 
 
-// Park.prototype.popularDinosaur = function(dinosaurs)
-// {
-//   this.guestsAttractedPerDay.sort(dinosaurs);
-// }
+Park.prototype.findBySpecies = function(species){
+  dinosaursBySpecies = [];
+  for (dinosaur of this.dinosaurs){
+    if(dinosaur.species === species){
+      dinosaursBySpecies.push(dinosaur);
+    }
+    return dinosaursBySpecies;
+  }
+}
+
+Park.prototype.totalVisitorsPerDay = function() {
+
+
+}
 
 
 module.exports = Park;
